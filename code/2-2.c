@@ -10,12 +10,22 @@ int main(int argc, const char* argv[]) {
     FILE* fp = fopen("student.txt", "r");
     int count = 0;
     Student students[64];
-
+    while(1){
+        if(feof(fp)!=0)
+            break;
+        fscanf(fp,"%s %d", students[count].name, students[count].score);
+        count++;
+    }
 
 
     int max = 0;
     float avg = 0;
 
+    for(int i=0; i<count; i++){
+        max+=students[i].score;
+        
+    }
+    avg = (float)max/count;
 
 
     printf("max: %d\n", max);
