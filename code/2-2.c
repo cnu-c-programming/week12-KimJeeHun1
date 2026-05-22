@@ -13,7 +13,7 @@ int main(int argc, const char* argv[]) {
     while(1){
         if(feof(fp)!=0) 
             break;
-        fscanf(fp,"%s %d", students[count].name, &students[count].score);
+        fscanf(fp,"%s %d", students[count].name, &(students[count].score));
         count++;
     }
 
