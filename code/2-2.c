@@ -22,8 +22,8 @@ int main(int argc, const char* argv[]) {
     float avg = 0;
     int sum=0;
     for(int i=0; i<count; i++){
-        if(students[i]>max)
-            max = students[i];
+        if(students[i].score>max)
+            max = students[i].score;
         sum+=students[i].score;
         
     }
