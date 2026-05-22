@@ -20,12 +20,14 @@ int main(int argc, const char* argv[]) {
 
     int max = 0;
     float avg = 0;
-
+    int sum=0;
     for(int i=0; i<count; i++){
-        max+=students[i].score;
+        if(students[i]>max)
+            max = students[i];
+        sum+=students[i].score;
         
     }
-    avg = (float)max/count;
+    avg = (float)sum/count;
 
 
     printf("max: %d\n", max);
