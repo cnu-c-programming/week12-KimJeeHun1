@@ -8,6 +8,7 @@ int main(int argc, const char* argv[]) {
     for(char i='a'; i<='z'; i++){
         int num=0;
         char ch;
+        rewind(fp);
         while((ch=fgetc(fp))!=EOF){
             if(ch==i)
                 num++;
