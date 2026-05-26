@@ -7,9 +7,9 @@ int main(int argc, const char* argv[]) {
 FILE* fp_src = fopen(argv[1],"r");
 FILE* fp_dst = fopen(argv[2],"w");
 
-FILE* temp = fopen("myfile2.txt", "rw");
-temp=fp_src;
-fp_dst=temp;
+while((ch=fgetc(fp_src))!=EOF) {
+        fputc(ch, fp_dst);
+    }
     
 fclose(fp_src);
 fclose(fp_dst);
